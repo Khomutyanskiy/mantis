@@ -1,0 +1,23 @@
+# macOS / Xcode
+.DS_Store
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+
+# Секреты: конфиг Firebase не публикуем (положите свой GoogleService-Info.plist в mantis/mantis/)
+GoogleService-Info.plist
+
+# Видео и рабочие файлы
+*.MOV
+*.mov
+*.mp4
+work/
+Claude outputs/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+python/output/
+*.pt

@@ -1,0 +1,52 @@
+# Конфиг под тестовое видео IMG_1761.MOV (аллея, телефон на земле, вертикальная съёмка).
+# Зона детекции — весь кадр, линия подсчёта — вертикальная посередине,
+# «посмотрел» = повернулся лицом к камере (камера играет роль витрины).
+# Поворот видео с телефона определяется автоматически (source.rotate: auto).
+model:
+  weights: yolo11n-pose.pt
+  conf: 0.35
+  imgsz: 960
+  device: null
+  tracker: bytetrack.yaml
+source:
+  rotate: auto
+  max_side: 1920
+count_line:
+- - 0.5
+  - 0.0
+- - 0.5
+  - 1.0
+showcase_zone:
+- - 0.0
+  - 0.0
+- - 1.0
+  - 0.0
+- - 1.0
+  - 1.0
+- - 0.0
+  - 1.0
+slowdown:
+  speed_threshold: 0.3
+  min_slow_seconds: 1.0
+  dwell_seconds: 8.0
+  smoothing_seconds: 0.5
+  focal_ratio: 0.8
+  depth_window_seconds: 1.0
+  dwell_only_with_zone: true
+look:
+  showcase_direction: camera
+  max_yaw: 0.35
+  min_side_yaw: 0.35
+  min_look_seconds: 0.6
+  min_keypoint_conf: 0.5
+tracking:
+  lost_timeout_seconds: 2.0
+  min_track_seconds: 0.5
+output:
+  dir: output
+  save_video: true
+  show: false
+  display_height: 900
+  display_width: 1600
+  fullscreen: false
+  summary_every_seconds: 10
