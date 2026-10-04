@@ -17,7 +17,7 @@
 
 1. Откройте `mantis/mantis.xcodeproj` в Xcode 26+ (iOS 26.1).
 2. Добавьте пакет `https://github.com/firebase/firebase-ios-sdk` → `FirebaseAuth`, `FirebaseFirestore` (без него приложение собирается, облако отключено).
-3. Положите свой `GoogleService-Info.plist` в `mantis/mantis/` (в репозиторий не входит).
+3. Конфиг Firebase `GoogleService-Info.plist` уже лежит в `mantis/mantis/` (проект `jinpix-ac93d`).
 4. В консоли Firebase: Authentication → Email/Password; Firestore с правилами:
 
 ```
